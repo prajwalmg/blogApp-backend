@@ -1,0 +1,78 @@
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ),
+    url("../../assets/pexels-jessica-lewis-creative-583847.jpg");
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+.registerTitle {
+  font-size: 50px;
+  color: rgb(1, 1, 1);
+  text-shadow: rgb(204, 203, 203) 2px 3px;
+}
+
+.registerForm {
+  margin-top: 20px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label {
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(126, 125, 125) 0.5px 0.5px;
+}
+
+.registerInput {
+  padding: 10px;
+  height: 20px;
+  border-radius: 3px;
+  opacity: 0.5;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.registerInput:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(156, 196, 186);
+  border-radius: 7px;
+  padding: 10px;
+  border: 1px solid rgb(48, 77, 70);
+  color: rgb(39, 38, 38);
+  text-shadow: rgb(173, 171, 171) 0.5px 0.5px;
+  font-size: 15px;
+}
+
+.registerLoginButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgb(239, 150, 150);
+  margin: 0;
+}
+
+.errorText {
+  padding: 10px;
+  color: rgb(242, 41, 41);
+  text-shadow: rgb(193, 24, 24) 0.5px 0.5px;
+}
+
+::placeholder {
+  color: black;
+}

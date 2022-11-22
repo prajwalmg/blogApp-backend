@@ -1,0 +1,79 @@
+.sidebar {
+    flex: 3;
+    margin: 30px 20px 20px;
+    padding-bottom: 30px;
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarTitle {
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+    border-top: 1px solid #a7a4a4;
+    border-bottom: 1px solid #a7a4a4;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    color: #222;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+}
+
+.sidebarProfileImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 7%;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.sidebarItem > p {
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.sidebarList {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.sidebarListItem {
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebarSocial {
+    /* margin-top: 7px; */
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarIcon {
+    font-size: 16px;
+    /* margin-left: 10px; */
+    padding: 5px;
+    cursor: pointer;
+}
