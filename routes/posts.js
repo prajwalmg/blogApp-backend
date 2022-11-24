@@ -5,6 +5,7 @@ const Post = require("../models/Post");
 // CREATE POST
 
 router.post("/", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const newPost = await Post(req.body);
 
   try {
@@ -19,6 +20,7 @@ router.post("/", async (req, res) => {
 // DELETE POST
 
 router.delete("/:id", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   // Checking if the entered userId is equal to the current userId(userId in the url)
 
   try {
@@ -43,6 +45,7 @@ router.delete("/:id", async (req, res) => {
 // UPDATE POST
 
 router.put("/:id", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   try {
     const post = await Post.findById(req.params.id);
     if (post.username === req.body.username) {
@@ -66,6 +69,7 @@ router.put("/:id", async (req, res) => {
 // GET POST
 
 router.get("/:id", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   try {
     const post = await Post.findById(req.params.id);
 
@@ -78,6 +82,7 @@ router.get("/:id", async (req, res) => {
 // GET ALL POSTS
 
 router.get("/", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const username = req.query.user;
   const category = req.query.category;
 

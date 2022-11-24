@@ -4,6 +4,7 @@ const Category = require("../models/Category");
 // POST CATEGORY
 
 router.post("/", async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const newCategory = await Category(req.body);
 
     try {
@@ -18,6 +19,7 @@ router.post("/", async (req, res) => {
 // GET CATEGORY
 
 router.get("/", async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     try {
         const categories = await Category.find();
 

@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 
 // Finding user from the userId
 router.put("/:id", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   // Checking if the entered userId is equal to the current userId(userId in the url)
   if (req.body.userId === req.params.id) {
     // Hashing the new password and updating it
@@ -36,6 +37,7 @@ router.put("/:id", async (req, res) => {
 // DELETE
 
 router.delete("/:id", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   // Checking if the entered userId is equal to the current userId(userId in the url)
   if (req.body.userId === req.params.id) {
     try {
@@ -59,6 +61,7 @@ router.delete("/:id", async (req, res) => {
 // GET USER
 
 router.get("/:id", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
     try {
         const user = await User.findById(req.params.id);
         const { password, ...others} = user._doc;
