@@ -45,6 +45,11 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://mgblogapp.onrender.com");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
 
 // app.use(express.static(path.join(__dirname, "/client/build")));
 
