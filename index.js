@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors");
 
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
@@ -13,6 +14,7 @@ const categoryRoute = require("./routes/categories");
 dotenv.config(); // for using/configuring the .env file
 app.use(express.json()); // for sending json files
 app.use("/images", express.static(path.join(__dirname, "/images"))); // Making the /images folder public
+app.use(cors({ origin: "*" }));
 
 // Connecting to MongoDB using the url provided as MONGO_URL
 mongoose
@@ -45,11 +47,11 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://mgblogapp.onrender.com");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-})
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "https://mgblogapp.onrender.com");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// })
 
 // app.use(express.static(path.join(__dirname, "/client/build")));
 
